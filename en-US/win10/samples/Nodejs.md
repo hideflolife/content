@@ -18,13 +18,16 @@ Related: [MemoryStatus C++ Console Application Sample]({{site.baseurl}}/{{page.l
 ###Copy Node.js to your Raspberry Pi 2
 * Open up an explorer window on your PC and enter **\\\\\<IP address of your device\>\\C$** to access files on your device. The credentials are:
 
-   username: <IP address or device name, default is minwinpc>\Administrator  
+   username: <IP address or device name, default is minwinpc>\Administrator
    password: p@ssw0rd  
 
   NOTE: It is **highly recommended** that you update the default password for the Administrator account.  Please follow the instructions found [here]({{site.baseurl}}/{{page.lang}}/win10/samples/PowerShell.htm).  
 
-* Run `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max. 
-  After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. **Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
+* Using PowerShell, run `& 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`. Use `ARM` if you have a Raspberry Pi 2. Use `x86` if you have a MinnowBoard Max. 
+  After completing this step, Node.js will be in `c:\Node.js (Chakra)` on your device. 
+
+**Note:** If you haven't entered the credentials through the explorer window you will get an "Access Denied" error.
+**Note:** Depending on your security policy, it may be necessary to run `powershell -ExecutionPolicy ByPass -File 'C:\Program Files (x86)\Node.js (chakra)\CopyNodeChakra.ps1' -arch <ARM | x86 | x64 > -ip <Device IP Address>`
 
 
 ###Create MemoryStatus Addon
